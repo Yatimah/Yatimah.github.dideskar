@@ -53,7 +53,7 @@
             															<form action="<?= base_url('update-status-sku') ?>" method="post" enctype="multipart/form-data">
             																<input type="hidden" name="id" value="<?= $data->id ?>" class="form-control" readonly>
             																<input type="hidden" name="id_warga" value="<?= $data->id_warga ?>" class="form-control" readonly>
-            																<input type="hidden" name="status" value="Terverifikasi" class="form-control" readonly>
+            																<input type="hidden" name="status" value="Diterima" class="form-control" readonly>
             																<button class="btn btn-success btn-sm" type="submit">Verifikasi</button>
             															</form>
             															<form action="<?= base_url('update-status-sku') ?>" method="post" enctype="multipart/form-data">
@@ -64,7 +64,12 @@
             															</form>
             														</div>
             													<?php } else if ($data->status == 'Terverifikasi') { ?>
-            														<small class="text-center text-danger font-bold">No Action</small>
+            														<div class="btn-group">
+            															<a href="<?= base_url('cetak-surat-keterangan-usaha/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
+            															<button type="button" class="btn btn-danger sm" data-toggle="modal" data-target="#hapus<?= $data->id ?>">
+            																<i class="bi bi-trash-fill"></i>
+            															</button>
+            														</div>
             													<?php } else if ($data->status == 'Diterima') { ?>
             														<div class="btn-group">
             															<a href="<?= base_url('cetak-surat-keterangan-usaha/' . $data->id . '?nomor=' . $data->nomor_surat) ?>" class="btn btn-primary btn-sm" target="blank_"><i class="bi bi-printer-fill"></i></a>
