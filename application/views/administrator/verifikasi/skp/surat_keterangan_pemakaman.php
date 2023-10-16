@@ -52,7 +52,7 @@
             															<form action="<?= base_url('update-status-skp') ?>" method="post" enctype="multipart/form-data">
             																<input type="hidden" name="id" value="<?= $data->id ?>" class="form-control" readonly>
             																<input type="hidden" name="id_warga" value="<?= $data->id_warga ?>" class="form-control" readonly>
-            																<input type="hidden" name="status" value="Terverifikasi" class="form-control" readonly>
+            																<input type="hidden" name="status" value="Diterima" class="form-control" readonly>
             																<button class="btn btn-success btn-sm" type="submit">Verifikasi</button>
             															</form>
             															<form action="<?= base_url('update-status-skp') ?>" method="post" enctype="multipart/form-data">
